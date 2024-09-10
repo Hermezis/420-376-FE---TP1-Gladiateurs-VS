@@ -15,7 +15,11 @@ public class Personnage {
     
     // <editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
     public Personnage(String nom, int attaqueMax, int defense, int pvs, int ini) {
-        // TODO : Constructeur AVEC paramètres
+        this.nom=nom;
+        this.pointsDeVie=pvs;
+        this.valeurMaxAttaque=attaqueMax;
+        this.valeurDefence=defense;
+        this.initiative=ini;
     }
 
     public Personnage() {
@@ -30,7 +34,10 @@ public class Personnage {
     }
     // </editor-fold>
 
-    public String getNom() {
+  
+   
+    // <editor-fold defaultstate="collapsed" desc="Getters et setters">
+     public String getNom() {
         return nom;
     }
 
@@ -69,10 +76,6 @@ public class Personnage {
     public void setInitiative(int initiative) {
         this.initiative = initiative;
     }
-   
-    // <editor-fold defaultstate="collapsed" desc="Getters et setters">
-    // TODO : Les getters
-    // TODO : Les setters
     // </editor-fold>
 
     // **************************************************************************
@@ -81,6 +84,13 @@ public class Personnage {
     // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public void afficherInfosPersonnage() {
         // TODO : Afficher les infos du personnage, tel que montré dans l'énoncé
+        System.out.println(nom+"\nAttaque : "+valeurMaxAttaque+"\nDefense : "+valeurDefence+"\nPoints de vie : "+pointsDeVie+"\ninitiative : "+initiative);
+        if (pointsDeVie < 1) {
+            System.out.println("Statut : mort");
+        }
+        else{
+            System.out.println("Statut : Vivant");
+        }   
     }
 
     private int attaqueCalcul() {

@@ -18,11 +18,11 @@ public class JeuGladiateurs {
     Personnage Igor = new Personnage("igor l'empaleur",25,5,100,30);
     // </editor-fold>
 
-    // **************************************************************************
-    // **************************************************************************
-    // **************************************************************************
+   
     // <editor-fold defaultstate="collapsed" desc="Affichage pré-combat">
     // TODO : Afficher les infos de chaque personnage
+     Bob.afficherInfosPersonnage();
+     Igor.afficherInfosPersonnage();
     // TODO : Afficher le message du début du combat
     // </editor-fold>
 
