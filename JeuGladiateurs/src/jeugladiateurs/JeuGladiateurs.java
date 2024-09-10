@@ -24,6 +24,7 @@ public class JeuGladiateurs {
      Bob.afficherInfosPersonnage();
      Igor.afficherInfosPersonnage();
     // TODO : Afficher le message du début du combat
+        System.out.println("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n<<<< que le combat commence ! <<<<\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n");
     // </editor-fold>
 
     // **************************************************************************
