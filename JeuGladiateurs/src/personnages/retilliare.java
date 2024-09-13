@@ -47,7 +47,7 @@ public class retilliare extends Personnage {
                 personnageCible.pointsDeVie = 0;
                 System.out.println("Son filet attrape Bob le malchanceux et il l’empale sauvagement avec sa lance");
             } else {
-                
+
                 System.out.println("le filet n'ateint pas sa cible");
                 filet = false;
 
