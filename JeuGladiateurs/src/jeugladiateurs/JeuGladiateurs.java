@@ -14,17 +14,41 @@ public class JeuGladiateurs {
     // <editor-fold defaultstate="expanded" desc="Instanciation des objets">
     CompteurDeTour tour = new CompteurDeTour();
     AffichageEcran affichage = new AffichageEcran();
-    Personnage Bob = new Personnage("bob le malchanceux",15,15,70,15);
-    Personnage Igor = new Personnage("igor l'empaleur",25,5,100,30);
+    Personnage Bob = new Personnage("Bob le malchanceux",15,15,70,15);
+    Personnage Igor = new Personnage("Igor l'empaleur",25,5,100,30);
     // </editor-fold>
 
-   
+    // **************************************************************************
+    // **************************************************************************
+    // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Affichage pré-combat">
     // TODO : Afficher les infos de chaque personnage
-     Bob.afficherInfosPersonnage();
-     Igor.afficherInfosPersonnage();
+    Bob.afficherInfosPersonnage();
+    Igor.afficherInfosPersonnage();
     // TODO : Afficher le message du début du combat
-        System.out.println("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n<<<< que le combat commence ! <<<<\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n");
+    affichage.afficherDebutCombat();
+        while (Bob.pointsDeVie>0 && Igor.pointsDeVie>0){
+            tour.afficheTour();
+            for (int i = 0; i < 100; i++) {
+                if (Bob.initiative==i) {
+                    Bob.frapperPersonnage(Igor);
+                }
+                if (Igor.initiative==i) {
+                    Igor.frapperPersonnage(Bob);
+                }
+            }
+            affichage.afficherSeparateurInfosPerso();
+            Bob.afficherInfosPersonnage();
+            Igor.afficherInfosPersonnage();
+            Bob.setNewInitiativeRandom();
+            Igor.setNewInitiativeRandom();
+            tour.augmenteTour();
+            affichage.afficherSeparateurDeTour();
+        }
+        affichage.afficheVictoire(Bob, Igor);
+
+    
+    
     // </editor-fold>
 
     // **************************************************************************
