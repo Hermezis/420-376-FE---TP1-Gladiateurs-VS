@@ -1,6 +1,8 @@
 
 package personnages;
 
+import java.util.Random;
+
 /**
  *
  * @author 201633534
@@ -8,6 +10,7 @@ package personnages;
 public class retilliare extends Personnage{
 
   String classe="retilliare";
+  boolean filet =true;
 
     public retilliare(String nom, int attaqueMax, int defense, int pvs, int ini) {
         super(nom, attaqueMax, defense, pvs, ini);
@@ -24,5 +27,13 @@ public class retilliare extends Personnage{
         }
             
         }
+     private int filetCalcul() {
+        // TODO : Retourner la valeur de l'attaque du personnage.
+        // Cette valeur est trouvée aléatoirement et doit se situer entre ZÉRO et valeurMaxAttaque.
+        Random rand= new Random();
+        int attraper;
+        attraper=rand.nextInt(100 - 0)+1;
+        return attraper;
+    }
   
 }

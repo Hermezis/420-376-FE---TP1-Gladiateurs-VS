@@ -34,6 +34,7 @@ public class JeuGladiateurs {
             for (int i = 0; i < 100; i++) {
                 if (Bob.initiative==i) {
                     Bob.frapperPersonnage(Igor);
+                   
                 }
                 if (Igor.initiative==i) {
                     Igor.frapperPersonnage(Bob);

@@ -24,5 +24,16 @@ public class mirmillion extends Personnage{
         }
             
         }
-  
+  @Override
+    public void setNewInitiativeRandom() {
+        // TODO : Modifier de façon aléatoire la valeur INI du personnage.
+        this.initiative=(int)(Math.random()*31);
+    }
+     public void frapperPersonnage(Personnage personnageCible) {
+        super.frapperPersonnage(personnageCible);
+         if (personnageCible.pointsDeVie<1) {
+                        System.out.println("Bob decapite sont adversaire");
+                    }
+                    else{super.frapperPersonnage(personnageCible);}
+    }
 }
